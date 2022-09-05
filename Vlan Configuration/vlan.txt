@@ -1,0 +1,30 @@
+Switch>enable
+Switch#config terminal
+Switch(config)#int fa0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config-if)#int fa0/2
+Switch(config)#int fa0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config-if)#int fa0/3
+Switch(config)#int fa0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config-if)#int fa0/4
+Switch(config)#int fa0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#do write memory
